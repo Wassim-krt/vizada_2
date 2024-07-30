@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Teko:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.arial {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+.fontc {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 600;
+}
+.teko-600 {
+  font-family: "Teko", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.teko-400 {
+  font-family: "Teko", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.animate-line {
+  height: 0;
+  animation: expandLine 3s ease-out forwards;
+}
+
+.serviceCard {
+  position: relative;
+}
+.serviceCard::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 260px;
+  background: #000;
+  top: 5px;
+  left: 10px;
+  display: flex;
+  z-index: -5;
+}
+
+@keyframes expandLine {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 80%; /* or any desired width */
+  }
+}
+
+.gradient-text {
+  background: -webkit-linear-gradient(#7d3901, #fb2e2e);
+  text-decoration-line: underline;
+  text-decoration-color: #ef6c00;
+  text-decoration-style: wavy;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-wrapper::after {
+  content: "";
+  position: absolute;
+
+  /* inset: 5px; */
+  z-index: -1;
+  background: inherit;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+.card-wrapper::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  transition: 0.2s;
+  border-radius: 15px;
+  background: #ffa200;
+  animation: animategradient 4s linear infinite;
+}
+
+.card-wrapper:hover::before {
+  width: 104%;
+  height: 102%;
+}
+@keyframes animategradient {
+  50% {
+    filter: hue-rotate(250deg);
+  }
+}
+
+.partners {
+  padding: 10px;
+}
+
+@-webkit-keyframes slideleft {
+  0% {
+    background-position: 385000px;
+  }
+  100% {
+    background-position: 0;
+  }
+}
+
+@keyframes slideleft {
+  0% {
+    background-position: 385000px;
+  }
+  100% {
+    background-position: 0;
+  }
+}
+
+.partners-img-container {
+  height: 100px;
+  width: 100%;
+  overflow: auto;
+}
+
+.partners-img-container::-webkit-scrollbar {
+  width: 0 !important;
+} /* hide scrollbar in Chrome */
+.partners-img-container {
+  scrollbar-width: none;
+} /* hide scrollbar in mozilla */
+.partners-img-container {
+  -ms-overflow-style: none;
+} /* hide scrollbar in IE */
+
+.partners-img-container .partners-img {
+  height: 100%;
+  width: 100%;
+  background: transparent url("./assets/vizada-logo.png") repeat-x 50% 0;
+  -webkit-animation: slideleft 5000s linear infinite;
+  animation: slideleft 5000s linear infinite;
+  cursor: grab;
+}
+.Profile-container {
+  position: relative;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  animation: ripple 15s infinite;
+  box-shadow: 0px 0px 1px 0px #508fb9;
+  transform-origin: center;
+}
+
+.small {
+  width: 10%; /* Adjust percentage for responsiveness */
+  height: 10%; /* Adjust percentage for responsiveness */
+  left: 45%; /* Adjust position for centering */
+  top: 45%; /* Adjust position for centering */
+}
+
+.medium {
+  width: 20%; /* Adjust percentage for responsiveness */
+  height: 20%; /* Adjust percentage for responsiveness */
+  left: 40%; /* Adjust position for centering */
+  top: 40%; /* Adjust position for centering */
+}
+
+.large {
+  width: 30%; /* Adjust percentage for responsiveness */
+  height: 30%; /* Adjust percentage for responsiveness */
+  left: 35%; /* Adjust position for centering */
+  top: 35%; /* Adjust position for centering */
+}
+
+.xlarge {
+  width: 40%; /* Adjust percentage for responsiveness */
+  height: 40%; /* Adjust percentage for responsiveness */
+  left: 30%; /* Adjust position for centering */
+  top: 30%; /* Adjust position for centering */
+}
+
+.xxlarge {
+  width: 50%; /* Adjust percentage for responsiveness */
+  height: 50%; /* Adjust percentage for responsiveness */
+  left: 25%; /* Adjust position for centering */
+  top: 25%; /* Adjust position for centering */
+}
+
+.shade1 {
+  opacity: 0.2;
+}
+
+.shade2 {
+  opacity: 0.5;
+}
+
+.shade3 {
+  opacity: 0.7;
+}
+
+.shade4 {
+  opacity: 0.8;
+}
+
+.shade5 {
+  opacity: 0.9;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.8);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+}
+.opensans {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.card {
+  background-color: #f2f2f2;
+
+  border-radius: 4px;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-sizing: border-box;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  overflow: visible;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.card:hover {
+  text-decoration: none;
+}
